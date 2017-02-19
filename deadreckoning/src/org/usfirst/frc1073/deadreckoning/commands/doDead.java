@@ -46,8 +46,15 @@ public class doDead extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	double curr_ang;
+    	double curr_accel_x, curr_accel_y;
     	curr_ang = RobotMap.deadReckoningAnalogGyro1.getAngle();
     	SmartDashboard.putNumber("Current_Angle", curr_ang);
+    	curr_accel_x = RobotMap.deadReckoningAnalogAccelerometer1.getX();
+    	curr_accel_y = RobotMap.deadReckoningAnalogAccelerometer1.getY();
+    	SmartDashboard.putNumber("Current X Acceleration", curr_accel_x);
+    	SmartDashboard.putNumber("Current Y Acceleration", curr_accel_y);
+    	
+
     	
     }
 
